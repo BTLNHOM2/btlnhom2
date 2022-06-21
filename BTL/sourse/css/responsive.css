@@ -1,0 +1,41 @@
+@media only screen and (min-width:740px) and (max-width:1023px) {
+    .form-category{
+        display: none;
+    }
+   .form-filter-product{
+        display: none;
+   }
+   .form-filter-select{
+    display: block;
+   }
+   .nav-home-list{
+    display: none;
+   }
+   .header{
+    display: none;
+   }
+   .header-mobile{
+    display: block;
+   }
+
+}
+
+/* Mobile */
+@media only screen and (max-width:739px){
+    .form-category{
+        display: none;
+    }
+   .form-filter-product{
+        display: none;
+   }
+   .form-filter-select{
+    display: block;
+   }
+   .header{
+    display: none;
+   }
+   .header-mobile{
+    display: block;
+   }
+
+}
