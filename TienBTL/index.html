@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./sourse/css/base.css">
+    <link rel="stylesheet" href="./sourse/css/main.css">
+    <link rel="stylesheet" href="./sourse/css/responsive.css">
+    
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="./sourse/font/fontawesome-free-5.15.3-web/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+    <title>Bài tập lớn</title>
+</head>
+
+<body>
+    <!-- header for pc -->
+    <header class="p-3 header" style="position: fixed; top:0;width: 100%;z-index:4;background-color: black;">
+        <div class="container">
+          <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+            <a href="./" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+                <i class="fas fa-desktop " style="width:50px;font-size:30px;"></i>
+            </a>
+    
+            <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0 nav-home-list">
+              <li><a href="#" class="nav-link px-2 text-white">Trang chủ</a></li>
+              <li><a href="#" class="nav-link px-2 text-white">Giới thiệu</a></li>
+              <li><a href="#" class="nav-link px-2 text-white">Tin tức</a></li>
+              <li><a href="#" class="nav-link px-2 text-white">Tư vấn</a></li>
+              <li><a href="#" class="nav-link px-2 text-white">Liên hệ</a></li>
+            </ul>
+    
+            <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+              <input type="search" class="form-control form-control-dark" placeholder="Search..." aria-label="Search">
+            </form>
+            <div class="dropdown text-end">
+                <a href="#" class="d-block link-light text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdMdXs5eviI2YOTOmySG_mvZk6K5mo3MZRTw&usqp=CAU" alt="mdo" width="32" height="32" class="rounded-circle">
+                </a>
+                <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1">
+                  <li><a class="dropdown-item" href="#">New project</a></li>
+                  <li><a class="dropdown-item" href="#">Settings</a></li>
+                  <li><a class="dropdown-item" href="#">Profile</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Sign out</a></li>
+                </ul>
+              </div>
+          </div>
+        </div>
+    </header>
+      <!-- header for mobile -->
+    <header class="p-3 header-mobile" style="position: fixed; top:0;width: 100%;z-index:4;background-color: black;" >
+        <div class="container">
+          <div class="d-flex flex-wrap align-items-center" style="justify-content: space-between;">
+
+            <i class="fas fa-bars btn-menu-mobi" onclick="handleShowMenuMobi()"></i>
+            <a href="./" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+                <i class="fas fa-desktop" style="width:50px;"></i>
+            </a>
+            <i class="fas fa-shopping-cart btn-cart-mobi"></i>
+            <!-- menu for mobile -->
+            <div class="col-8 menu-mobile" style="position: absolute; background-color: rgb(51, 51, 51);top: 0%;left: 0%;color: white;">
+                <div class=" d-flex" style="padding: 10px;">
+                    <i class="fas fa-times" id="close-menu-mobi" onclick="handleHideMenuMobi()"></i>
+
+                    <a href="#" class="d-block link-light text-decoration-none " id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false" style="padding:5px 0 0 10px ;">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdMdXs5eviI2YOTOmySG_mvZk6K5mo3MZRTw&usqp=CAU" alt="mdo" width="32" height="32" class="rounded-circle">
+                    </a>
+                    <label style="padding:5px 0 0 10px ;" for="">Lê Việt Anh</label>
+
+                </div>
+                <form role="search">
+                    <input type="search" class="form-control form-control-dark" placeholder="Search..." aria-label="Search">
+                </form>
+                <ul class="text-decoration-none nav-mobile-list">
+                    <li><a href="#" class="nav-link px-2 nav-mobile-item">Trang chủ</a></li>
+                    <li><a href="#" class="nav-link px-2 nav-mobile-item">Giới thiệu</a></li>
+                    <li><a href="#" class="nav-link px-2 nav-mobile-item">Tin tức</a></li>
+                    <li><a href="#" class="nav-link px-2 nav-mobile-item">Tư vấn</a></li>
+                    <li><a href="#" class="nav-link px-2 nav-mobile-item">Liên hệ</a></li>
+                </ul>
+            </div>
+          </div>
+        </div>
+    </header>
+    <div class="container" style="margin-top: 100px; border-radius: 20px;"></div>      
+    <!-- footer -->
+    <footer class=" d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top" style="color:rgba(0,0,0,.55);margin:100px 0 0 0;" >
+        <div class="container">
+            <div class="row row-cols-2 row-cols-xs-2  row-cols-sm-2 row-cols-md-4 row-cols-lg-4 row-cols-xl-4" style="width:100%;margin:0;">
+                <div class="col">
+                   <h3>Chăm sóc khách hàng</h3>
+                   <ul style="list-style: none;padding: 0;">
+                    <li>Trung tâm trợ giúp</li>
+                    <li>Bảo hành tân nơi</li>
+                    <li>Vận chuyển</li>
+                    <li>Hướng dân mua hàng</li>
+                   </ul>
+                </div>
+                <div class="col">
+                    <h3>Giới thiệu</h3>
+                    <ul style="list-style: none;padding: 0;">
+                        <li>Tuyển dụng</li>
+                        <li>Điều khoản</li>
+                        <li>Chính sách bảo mật</li>
+                    </ul>
+                  
+                </div>
+                <div class="col">
+                    <h3>Thanh toán</h3>
+                    <ul style="list-style: none;padding: 0; display: flex;">
+                        <li>
+                            <i class="fab fa-paypal" style="font-size:30px;margin-right: 10px;"></i>
+                        </li>
+                        <li>
+                            <i class="fab fa-cc-visa" style="font-size:30px"></i>
+                        </li>
+                    </ul>
+
+                </div>
+                <div class="col">
+                    <h3>Theo dõi</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li>
+                            <i class="fab fa-facebook" style="font-size:20px;padding: 5px 0;"></i>
+                            <label for="">Facebook</label>
+                        </li>
+                        <li>
+                            <i class="fab fa-instagram" style="font-size:20px;padding: 5px 0;"></i>
+                            <label for="">Instagram</label>
+                        </li>
+                        <li>
+                            <i class="fab fa-youtube" style="font-size:20px;padding: 5px 0;"></i>
+                            <label for="">Youtube</label>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="./sourse/shop.js"></script>
+</body>
+</html>

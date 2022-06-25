@@ -1,0 +1,32 @@
+.header{
+    /* background-color: var(--header-color-1); */
+    background-color:var(--black-color);
+    color: var(--white-color);
+    font-size: 16px;
+}
+.header-mobile{
+    background-color:var(--black-color);
+    color: var(--white-color);
+    font-size: 16px;
+    display: none;
+}
+
+.nav-mobile-list{
+    list-style: none;
+    padding: 5px 10px;
+}
+
+.nav-mobile-item{
+    padding: 5px;
+}
+
+.menu-mobile{
+    display: none;
+}
+#close-menu-mobi{
+    /* position: relative;
+    left: 67%; */
+    font-size: 25px;
+    color: white;
+}
+

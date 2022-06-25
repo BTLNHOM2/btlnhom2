@@ -1,0 +1,21 @@
+@media only screen and (min-width:740px) and (max-width:1023px) {
+   .nav-home-list{
+    display: none;
+   }
+   .header{
+    display: none;
+   }
+   .header-mobile{
+    display: block;
+   }
+}
+/* Mobile */
+@media only screen and (max-width:739px){
+   .header{
+    display: none;
+   }
+   .header-mobile{
+    display: block;
+   }
+
+}
